@@ -8,20 +8,21 @@ const API = "https://fakestoreapi.com/products"
 function App() {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("")
+  const [loading, setLoading] = useState(true);
 
   //Fetch product data
-  const fetchProducts = async () => {
-    try {
-      const response = await fetch(API)
-      const data = await response.json()
-
-      setProducts(data)
-    } catch (err) {
-      console.error("Could not fetch products data", err)
-    }
-  }
-
   useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(API)
+        const data = await response.json()
+        setProducts(data)
+      } catch (err) { 
+        console.error("Could not fetch products data", err)
+      } finally {
+        setLoading(false)
+      }
+    }
     fetchProducts()
   }, [])
 
@@ -32,13 +33,17 @@ function App() {
     <>
       <NavBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <div className="container">
-        <div className="products">
+        {loading ? (<p>Loading.. chotto mattekudasai...</p>
+        ) : (
+          <div className="products">
           {
             searchProducts.map((product) => (
               <ProductCard product = {product} />
             ))
           }
         </div>
+        )  
+      }
       </div>
     </>
   );
