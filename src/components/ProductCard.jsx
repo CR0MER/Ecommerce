@@ -10,7 +10,7 @@ const ProductCard = ( {product} ) => {
                     <p>{product.rating.rate} Stars</p>
                     <p>{product.category}</p>
                 <div className="inforow">
-                    <p>₱<strong>{product.price}</strong></p>
+                    <h3>₱{product.price}</h3>
                     <button>BUY NOW</button>
                 </div>
             </div>

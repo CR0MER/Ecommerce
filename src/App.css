@@ -24,14 +24,34 @@ button{
 }
 
 .nav-searchbox {
+  border: none;
   padding: 8px 12px;
   font-size: 14px;
-  border: none;
   width: 40vw;
+  padding-left: 40px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-icon:hover {
+  cursor: pointer;
 }
 
 .navbar-left {
   margin-right: 10px;
+}
+
+.navbar-center {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-right {
@@ -56,6 +76,12 @@ button{
   /* border: 1px solid red; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
@@ -65,12 +91,7 @@ button{
   margin-bottom: 10px;
 }
 
-.info {
-  width: 20rem;
-  height: 5.40rem;
-  border-radius: 0px 0px 12px 12px;
-  background-color: rgb(255, 255, 100);
-}
+
 
 .card h4 {
   font-size: 14px;
@@ -84,9 +105,20 @@ button{
   min-height: 35px;
 }
 
+.card h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .card p {
   color: #555;
   font-size: 13px;
+}
+
+.info {
+  width: 20rem;
+  height: 5.40rem;
+  border-radius: 0px 0px 12px 12px;
+  background-color: rgb(255, 255, 100);
 }
 
 .inforow{
