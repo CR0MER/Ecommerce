@@ -1,33 +1,47 @@
 body {
   font-family: helvetica, sans-serif;
-  background: white;
+  background: rgba(245,245,245);
   margin: 0;
   padding: 0;
 }
 
 button{
-    width: 128px;
-    height: 34px;
-    border: none;
-    color: white;
-    background: rgba(19, 215, 144, 1);
-    border-radius: 0.3rem;
+  width: 128px;
+  height: 34px;
+  border: none;
+  color: white;
+  background: rgba(19, 215, 144, 1);
+  border-radius: 0.3rem;
+}
 
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(238,77,45);
+  color: white;
+  padding: 15px 20px;
+}
+
+.nav-searchbox {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  width: 40vw;
+}
+
+.navbar-left {
+  margin-right: 10px;
+}
+
+.navbar-right {
+  margin-left: 10px;
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-}
-
-.search-box {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 30px;
 }
 
 .products {
@@ -39,7 +53,9 @@ button{
 .card {
   background: #fff;
   padding: 15px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .card img {
@@ -74,7 +90,7 @@ button{
 }
 
 .inforow{
-    display: flex;
-  justify-content: space-between; /* Pushes the first item to the left and the last item to the right */
-  align-items: center; /* Aligns items vertically in the center */
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
 }

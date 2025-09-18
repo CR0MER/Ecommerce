@@ -5,9 +5,6 @@ const ProductCard = ( {product} ) => {
     return (
         <div className="card" key={product.id}>
             <img src={product.image} alt={product.title}/>
-
-            
-
             <div classname="info">
                 <h4>{product.title}</h4>
                     <p>{product.rating.rate} Stars</p>
