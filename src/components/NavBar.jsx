@@ -12,7 +12,7 @@ function NavBar({ searchTerm, setSearchTerm }) {
             <img src={searchLogo} alt="Search" className="search-icon"/> 
             <input
             type="text"
-            placeholder="SEARCH PRODUCTS IN [INSERT NAME HERE] YEAH!!!!"
+            placeholder="SEARCH PRODUCTS IN SHUPEE 🗿🗿🗿!"
             className="nav-searchbox"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
