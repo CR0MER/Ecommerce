@@ -2,7 +2,9 @@
 I did use AI to some extent to comprehend or relearn some concepts and remember basic syntax or properties(looking at you css). 
 I think I spent majority of my time just tweaking the css oh god
 
-Upon cloning the repository
+## Setup
+
+Upon cloning the repository,
 on the terminal, do:
 ### `npm i` or 'npm install'
 
